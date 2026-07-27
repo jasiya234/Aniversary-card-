@@ -1,58 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1 Year With You ❤️</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Hubby #chirkut 💕</title>
+<style>
+    body {
+        margin: 0;
+        background: #0a0a0a;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        overflow: hidden;
+    }
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        animation: fade 24s infinite;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.5);
+        background-blend-mode: overlay;
+    }
+    .slide h1 { font-size: 2.2em; margin: 10px; animation: zoom 3s ease-in-out; }
+    .slide p { font-size: 1.3em; padding: 0 25px; max-width: 650px; line-height: 1.7; }
+    .promise-box {
+        background: rgba(255,255,255,0.1);
+        padding: 25px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+    .promise-box h2 { margin-bottom: 15px; font-size: 1.8em; }
+    @keyframes fade {
+        0% {opacity: 0;} 12% {opacity: 1;} 25% {opacity: 1;} 37% {opacity: 0;}
+    }
+    @keyframes zoom { 0% {transform: scale(0.9);} 100% {transform: scale(1.1);} }
+    
+    .s1 {animation-delay: 0s; background-image: url('pic1.jpg');}
+    .s2 {animation-delay: 3s; background-image: url('pic2.jpg');}
+    .s3 {animation-delay: 6s; background-image: url('pic3.jpg');}
+    .s4 {animation-delay: 9s; background-image: url('pic4.jpg');}
+    .s5 {animation-delay: 12s; background-image: url('pic5.jpg');}
+    .s6 {animation-delay: 15s; background-image: url('pic6.jpg');}
+    .s7 {animation-delay: 18s; background-image: url('pic7.jpg');}
+    .s8 {animation-delay: 21s; background-image: url('pic1.jpg');}
+    
+    audio { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tap to Open Our Love Story 💌</h1>
-    <button onclick="openCard()">Open</button>
-  </div>
 
-  <div id="card" class="hidden">
-    <div class="slider">
-      <div class="slide"><img src="1.jpg"><p>Tera haath, mera saath 🤝</p></div>
-      <div class="slide"><img src="2.jpg"><p>Heena wale haath sabse khaas</p></div>
-      <div class="slide"><img src="3.jpg"><p>Tumhare kandhe pe sar rakhna sukoon hai</p></div>
-      <div class="slide"><img src="4.jpg"><p>School wale din yaad hain? 💕</p></div>
-      <div class="slide"><img src="5.jpg"><p>Ring wali ungli sabse pyaari</p></div>
-      <div class="slide"><img src="6.jpg"><p>Bas tum aur main</p></div>
-      <div class="slide"><img src="7.jpg"><p>Happy Anniversary Jaan</p></div>
-      <div class="slide"><video src="video.mp4" autoplay muted loop playsinline></video></div>
-    </div>
+<div class="slide s1">
+    <h1>Tera haath, mera saath 🤝</h1>
+    <p>To My Hubby #chirkut 💕</p>
+</div>
 
-    <div class="letter">
-      <h2>To My Hubby #chirkut 💕</h2>
-      <p>
-        A year has passed; now, a whole lifetime lies ahead. Yes, we had plenty of fights and arguments, but still... our first year was magical. Thank you for this memorable first year. Here’s to the first chapter of our relationship. This is just the beginning. I want to make our marriage beautiful. 
-        <br><br>
-        <b>1 YEAR<br>
-        12 MONTHS<br>
-        365 DAYS<br>
-        8760 HOURS<br>
-        525600 SECONDS<br>
-        EVERYDAY<br>
-        EVERY NIGHT<br>
-        EVERYTIME<br>
-        I LOVE YOU 💞</b>
-        <br><br>
-        Dear Hubby (#chirkut),<br><br>
-        It's our day again — July 31.<br>
-        From the very first day, you have been my favorite chapter — the one I keep re-reading.<br>
-        Thank you for the small things. The morning glances. The shared silences. The way you say my name like it means home.<br>
-        I promise to keep choosing you, in every season, every weather, every version of us we grow into.<br><br>
-        Here's to another year of tiny moments and big love.<br>
-        Always yours,💕
-      </p>
-    </div>
-  </div>
+<div class="slide s2">
+    <h1>1 YEAR</h1>
+    <p>525600 SECONDS... I LOVE YOU</p>
+</div>
 
-  <audio id="bgSong" loop>
-    <source src="song.mp3" type="audio/mpeg">
-  </audio>
-  <script src="script.js"></script>
+<div class="slide s3">
+    <p>From the very first day, you have been my favorite chapter</p>
+</div>
+
+<div class="slide s4 promise-box">
+    <h2>Your 5 Promises</h2>
+    <p>1. I promise that I will never leave you; I will always stay by your side—no matter the situation, I will always be with you.</p>
+</div>
+
+<div class="slide s5 promise-box">
+    <h2>Your 5 Promises</h2>
+    <p>2. I will choose us, every single day.</p>
+</div>
+
+<div class="slide s6 promise-box">
+    <h2>Your 5 Promises</h2>
+    <p>3. I will hold your hand through every storm.</p>
+</div>
+
+<div class="slide s7 promise-box">
+    <h2>Your 5 Promises</h2>
+    <p>4. I will keep falling for you, forever.</p>
+</div>
+
+<div class="slide s8 promise-box">
+    <h2>Your 5 Promises</h2>
+    <p>5. I will love you a little more tomorrow.<br><br>
+    Here's to another year of tiny moments and big love ❤️</p>
+</div>
+
+<audio controls autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
 </body>
 </html>
