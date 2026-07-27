@@ -3,102 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>To My Hubby #chirkut 💕</title>
+<title>For My #chirkut ❤️</title>
 <style>
     body {
         margin: 0;
-        background: #0a0a0a;
-        color: white;
+        background: #ffeef8;
         font-family: 'Poppins', sans-serif;
         text-align: center;
-        overflow: hidden;
+        overflow-x: hidden;
     }
-    .slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        opacity: 0;
-        animation: fade 24s infinite;
-        background-size: cover;
-        background-position: center;
-        background-color: rgba(0,0,0,0.5);
-        background-blend-mode: overlay;
-    }
-    .slide h1 { font-size: 2.2em; margin: 10px; animation: zoom 3s ease-in-out; }
-    .slide p { font-size: 1.3em; padding: 0 25px; max-width: 650px; line-height: 1.7; }
-    .promise-box {
-        background: rgba(255,255,255,0.1);
-        padding: 25px;
-        border-radius: 20px;
-        backdrop-filter: blur(10px);
-    }
-    .promise-box h2 { margin-bottom: 15px; font-size: 1.8em; }
-    @keyframes fade {
-        0% {opacity: 0;} 12% {opacity: 1;} 25% {opacity: 1;} 37% {opacity: 0;}
-    }
-    @keyframes zoom { 0% {transform: scale(0.9);} 100% {transform: scale(1.1);} }
+    .page { display: none; padding: 20px; min-height: 100vh; }
+    .page.active { display: block; }
     
-    .s1 {animation-delay: 0s; background-image: url('pic1.jpg');}
-    .s2 {animation-delay: 3s; background-image: url('pic2.jpg');}
-    .s3 {animation-delay: 6s; background-image: url('pic3.jpg');}
-    .s4 {animation-delay: 9s; background-image: url('pic4.jpg');}
-    .s5 {animation-delay: 12s; background-image: url('pic5.jpg');}
-    .s6 {animation-delay: 15s; background-image: url('pic6.jpg');}
-    .s7 {animation-delay: 18s; background-image: url('pic7.jpg');}
-    .s8 {animation-delay: 21s; background-image: url('pic1.jpg');}
-    
-    audio { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; }
+    .card {
+        background: white;
+        border-radius: 25px;
+        padding: 30px 20px;
+        margin: 20px auto;
+        max-width: 400px;
+        box-shadow: 0 10px 30px rgba(255,105,180,0.2);
+    }
+    h1 { color: #ff69b4; font-size: 2em; font-family: 'Dancing Script', cursive; }
+    h2 { color: #ff1493; }
+    .btn {
+        background: #ff69b4;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.1em;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .btn-outline { background: white; color: #ff69b4; border: 2px solid #ff69b4; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+    .grid-item { background: #fff0f5; padding: 20px; border-radius: 15px; cursor: pointer; }
+    .memories img { width: 48%; margin: 1%; border-radius: 15px; }
+    .hearts { position: fixed; top: 0; width: 100%; font-size: 20px; color: #ff69b4; animation: float 6s infinite; }
+    @keyframes float { 0% {top: -20px;} 100% {top: 100%; opacity: 0;} }
+    audio { position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); }
 </style>
 </head>
 <body>
 
-<div class="slide s1">
-    <h1>Tera haath, mera saath 🤝</h1>
-    <p>To My Hubby #chirkut 💕</p>
+<!-- Page 1: QR / Scan Me -->
+<div class="page active" id="page1">
+<div class="hearts">❤️ ❤️ ❤️</div>
+<h3>PoV: you surprised your Hubby with this cute surprise</h3>
+<div class="card">
+    <img src="qr.png" width="200">
+    <h2>Scan Me <3</h2>
+    <p>Here's a cute surprise for you!!</p>
+    <button class="btn" onclick="showPage('page2')">Open Your Gift 🎁</button>
+</div>
 </div>
 
-<div class="slide s2">
-    <h1>1 YEAR</h1>
-    <p>525600 SECONDS... I LOVE YOU</p>
+<!-- Page 2: Hey Chirkut -->
+<div class="page" id="page2">
+<div class="card">
+    <div style="font-size: 50px;">❤️</div>
+    <h1>Hey #chirkut!</h1>
+    <p>I made something special just for you because you mean the world to me.</p>
+    <button class="btn" onclick="showPage('page3')">Choose an Envelope</button>
+</div>
 </div>
 
-<div class="slide s3">
-    <p>From the very first day, you have been my favorite chapter</p>
+<!-- Page 3: Menu -->
+<div class="page" id="page3">
+<h2>Choose an envelope</h2>
+<p>Explore the little things I love about us.</p>
+<div class="grid">
+    <div class="grid-item" onclick="showPage('page4')">📷<br>Our Memories</div>
+    <div class="grid-item" onclick="showPage('page5')">💌<br>My Letter</div>
+    <div class="grid-item" onclick="showPage('page6')">❤️<br>Why I Love You</div>
+    <div class="grid-item" onclick="showPage('page7')">📅<br>Date Night?</div>
+</div>
 </div>
 
-<div class="slide s4 promise-box">
-    <h2>Your 5 Promises</h2>
-    <p>1. I promise that I will never leave you; I will always stay by your side—no matter the situation, I will always be with you.</p>
+<!-- Page 4: Memories -->
+<div class="page" id="page4">
+<h2>Our Best Moments 📸</h2>
+<p>Click on an image</p>
+<div class="memories">
+    <img src="pic1.jpg">
+    <img src="pic2.jpg">
+    <img src="pic3.jpg">
+    <img src="pic4.jpg">
+    <img src="pic5.jpg">
+    <img src="pic6.jpg">
+    <img src="pic7.jpg">
+    <img src="pic8.jpg">
+</div>
+<button class="btn-outline" onclick="showPage('page3')">Back</button>
 </div>
 
-<div class="slide s5 promise-box">
-    <h2>Your 5 Promises</h2>
-    <p>2. I will choose us, every single day.</p>
+<!-- Page 5: Letter with Promise -->
+<div class="page" id="page5">
+<div class="card">
+    <h2>To My #chirkut 💌</h2>
+    <p>Dearest #chirkut,</p>
+    <p>I promise that I will never leave you; I will always stay by your side—no matter the situation, I will always be with you.</p>
+    <p>Every day with you is a new adventure, and your smile is literally my favorite thing in the world.</p>
+    <button class="btn-outline" onclick="showPage('page3')">Back to Menu</button>
+</div>
 </div>
 
-<div class="slide s6 promise-box">
-    <h2>Your 5 Promises</h2>
-    <p>3. I will hold your hand through every storm.</p>
+<!-- Page 6: Why I Love You -->
+<div class="page" id="page6">
+<div class="card">
+    <h2>Why I Love You ❤️</h2>
+    <p>✓ You make my bad days softer and my good days brighter.</p>
+    <p>✓ You listen — really listen — and that means everything.</p>
+    <p>✓ You're my calm and my chaos at the same time.</p>
+    <p>✓ I promise to keep choosing you, every single day.</p>
+    <p>✓ Being with you feels like home.</p>
+    <button class="btn-outline" onclick="showPage('page3')">Back to Menu</button>
+</div>
 </div>
 
-<div class="slide s7 promise-box">
-    <h2>Your 5 Promises</h2>
-    <p>4. I will keep falling for you, forever.</p>
+<!-- Page 7: Date Night -->
+<div class="page" id="page7">
+<div class="card">
+    <h2>Be My Valentine? ❤️</h2>
+    <p>I have a plan for us...</p>
+    <h3>🎬 Movie night</h3>
+    <p>Pick you up at 7:00 PM?</p>
+    <button class="btn">Yes, I'd love to!</button>
+    <button class="btn-outline" onclick="showPage('page3')">Back</button>
 </div>
-
-<div class="slide s8 promise-box">
-    <h2>Your 5 Promises</h2>
-    <p>5. I will love you a little more tomorrow.<br><br>
-    Here's to another year of tiny moments and big love ❤️</p>
 </div>
 
 <audio controls autoplay loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 
+<script>
+function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
 </body>
 </html>
+
